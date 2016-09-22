@@ -1,0 +1,65 @@
+/*
+--------------------------------------------------
+html is set to 62.5% so that all REM measurements are 10px based
+e.g. 2.7rem = 27px
+--------------------------------------------------
+*/
+html {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+  /* Text may be inflated in this exact proportion - mobile devices */
+  text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+img, input, button, textarea,
+small, strong, sub, sup, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption,
+table, thead, tbody, tfoot, th, tr, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: 100%/120% inherit;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  resize: none;
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input[type=search]::-ms-clear { display: none; width: 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width: 0; height: 0; }
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration { display: none; }

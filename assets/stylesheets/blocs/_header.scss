@@ -1,0 +1,21 @@
+/*
+--------------------------------------------------------------------------------
+Header background images
+--------------------------------------------------------------------------------
+*/
+header {
+
+}
+
+@each $bg_item in $bg_list {
+  .bg-#{nth($bg_item, 1)} {
+    background-image: url(#{nth($bg_item, 2)}_s.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @include phablet { background-image: url(#{nth($bg_item, 2)}_m.jpg); }
+    @include tablet { background-image: url(#{nth($bg_item, 2)}_l.jpg); }
+    @include desktop { background-image: url(#{nth($bg_item, 2)}_xl.jpg); }
+  }
+}

@@ -1,0 +1,66 @@
+/*
+--------------------------------------------------------------------------------
+Sans serif auxiliar mixin
+--------------------------------------------------------------------------------
+*/
+@mixin sans_serif($w:300) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $w;
+  line-height: 120%;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Mobile first queries
+--------------------------------------------------------------------------------
+*/
+@mixin phablet        { @media (min-width: 550px)  { @content; } }
+@mixin tablet         { @media (min-width: 750px)  { @content; } }
+@mixin desktop        { @media (min-width: 1000px) { @content; } }
+@mixin hd             { @media (min-width: 1400px) { @content; } }
+@mixin resolution($r) { @media (min-width: #{$r})  { @content; } }
+
+
+
+/*
+--------------------------------------------------------------------------------
+Retina queries
+--------------------------------------------------------------------------------
+*/
+@mixin retina($dp) { @media (-webkit-min-device-pixel-ratio: #{$dp}) { @content; } }
+
+
+
+/*
+--------------------------------------------------------------------------------
+Fix for mobile devices
+--------------------------------------------------------------------------------
+*/
+@mixin remove_tap_highlight() {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Custom helpers
+--------------------------------------------------------------------------------
+*/
+@mixin no_select() {
+  user-select: none;
+}
+
+@mixin transition($duration:0.2) {
+  transition: #{$duration}s ease-in-out;
+}
+
+@mixin ease_out() {
+  transition: 0.3s cubic-bezier(0, 0, .3, .9);
+}
+
+@mixin translate($x, $y) {
+  transform: translate($x, $y);
+}

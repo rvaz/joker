@@ -1,0 +1,22 @@
+/*
+--------------------------------------------------------------------------------
+Grid system based on three columns
+--------------------------------------------------------------------------------
+*/
+.half, .third, .two-thirds {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.half {
+  @include tablet { width: 50%; }
+}
+
+.third {
+  @include tablet { width: 33.333%; }
+}
+
+.two-thirds {
+  @include tablet { width: 66.666%; }
+}

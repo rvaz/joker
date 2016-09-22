@@ -1,0 +1,107 @@
+--------------------------------------------------------------------------------
+NAMING CONVENTION
+--------------------------------------------------------------------------------
+Everything must be as verbose as possible.
+Use hyphens when naming mixins, extends and classes.
+User underscore for variables.
+Favour nesting instead of BEM naming conventions.
+Do not use camelCase.
+
+
+--------------------------------------------------------------------------------
+AVOID
+--------------------------------------------------------------------------------
+Never style an element based on its id. If need be create a new class.
+Always avoid the rule !important. If it feels like the only solution then maybe the css isn't properly structured.
+Minimize specificity, i.e., favour generic classes/single elements (atoms) over complex elements.
+
+
+--------------------------------------------------------------------------------
+FOLDERS STRUCTURE
+--------------------------------------------------------------------------------
+- atoms
+  - _base.scss          # Common base styles, e.g. h1, h2, p, b
+  - _progressbar.scss   # Progress bar style
+  - _buttons.scss       # Buttons styles
+  - _textfields.scss    # Input and textarea styles
+  - _checkbox.scss      # Checkboxes and toggles styles
+  - _dropdown.scss      # Dropdown style
+  - ...
+
+- blocs
+  - _widget.scss        # Blocs of content/items, e.g. widgets
+  - _chat.scss          # Messages styles
+  - _chart.scss         # Chart styles
+  - _header.scss        # Header
+  - _footer.scss        # Footer
+  - _pagination.scss    # Pagination
+  - ...
+
+- pages
+  - _auth.scss          # Authentication screens specific styles
+  - _home.scss          # Home specific styles
+  - _contact.scss       # Contact specific styles
+  - _settings.scss      # Settings specific styles
+  - ...
+
+- resources
+  - _joker.scss         # Grid system
+  - _mixins.scss        # Helper functions such as text-shadow, box-shadow or responsive break points
+  - _reset.scss         # Reset/normalize elements cross browser
+  - _fonts.scss         # Font family to be used
+  - _helpers.scss       # Atomic helpers
+  - _palette.scss       # Colors palette
+
+(- components)          # Folder for reactjs specific components (create only if needed)
+
+application.scss        # Main sass file, the one to where all sass will be compile into
+(ie.scss)               # Main ie fixes file (create only if needed)
+
+
+--------------------------------------------------------------------------------
+IMPORTS ORDER @application.scss
+--------------------------------------------------------------------------------
+'resources/reset',
+'resources/mixins',
+'resources/joker',
+
+'resources/fonts',
+'resources/palette',
+
+'atoms/base',
+'atoms/progressbar',
+'atoms/buttons',
+'atoms/textfields',
+'atoms/checkbox',
+'atoms/dropdown',
+
+'blocs/widget',
+'blocs/chat',
+'blocs/chart',
+'blocs/header',
+'blocs/footer',
+'blocs/pagination',
+
+'pages/auth',
+'pages/home',
+'pages/contact',
+'pages/settings',
+
+('components/*',)
+
+'resources/helpers';
+
+
+--------------------------------------------------------------------------------
+BROWSER SPECIFIC
+--------------------------------------------------------------------------------
+Whenever is needed to create specific css to fix some weird bug or address some browser specific issue/style (this may occur with older versions of ie), create a specific file for that particularity.
+e.g. fixing buttons and checkboxes on IE9
+-atoms
+  - _buttons_ie.scss
+  - _checkbox_ie.scss
+
+Then import all these fixes in main file ie.scss and link this file in html header tag [if lt IE 9] to target only IE.
+
+For IE10 and above wrap the necessary css code with the following @media screen and (min-width:0\0) { /* css here */ }
+

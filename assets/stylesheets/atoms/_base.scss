@@ -1,0 +1,48 @@
+/*
+--------------------------------------------------------------------------------
+HTML elements look n feel
+--------------------------------------------------------------------------------
+*/
+html {
+  /* base font-size is at reset.scss */
+  @include phablet { @include retina(1.3) { font-size: 80%; } }
+  @include tablet  { @include retina(1.5) { font-size: 90%; } }
+  @include desktop { @include retina(2)   { font-size: 100%; } }
+}
+
+body {
+  background-color: $white;
+  color: $dark;
+  font: normal 400 2rem/2.8rem 'Open Sans', sans-serif;
+  letter-spacing: -.001em;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -.05em;
+  line-height: 140%;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  @include transition();
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+b {
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 800;
+}
+
+i {
+  font-style: italic;
+}
