@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>search_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-188.000000, -53.000000)" stroke="#E6E7E8" stroke-width="2">
+            <g id="header" transform="translate(40.000000, 40.000000)">
+                <g id="search_icon" transform="translate(149.000000, 14.000000)">
+                    <circle id="Oval" cx="15" cy="15" r="15"></circle>
+                    <path d="M26.5,26.5 L33.5710678,33.5710678" id="Line" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
