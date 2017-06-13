@@ -22,10 +22,6 @@ Text and alignments
 .hide        { display: none !important; }
 .fw          { width: 100%; }
 .fh          { height: 100%; }
-.w-25        { width: 25%; }
-.w-40        { width: 40%; }
-.w-50        { width: 50%; }
-.w-60        { width: 60%; }
 .left        { float: left; }
 .right       { float: right; }
 .center      { margin: auto; float: none; }
@@ -45,6 +41,23 @@ Text and alignments
 
 .va-m        { vertical-align: middle; }
 
+.no-margin { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+
+
+/*
+--------------------------------------------------------------------------------
+Widths
+--------------------------------------------------------------------------------
+*/
+.w-25    { width: 25%; }
+.w-40    { width: 40%; }
+.w-50    { width: 50%; }
+.w-60    { width: 60%; }
+.maxw-25 { max-width: 25%; }
+.minw-11 { min-width: 11rem; }
+
+
 /*
 --------------------------------------------------------------------------------
 Draggable elements
@@ -60,19 +73,16 @@ Draggable elements
 }
 
 
-
 /*
 --------------------------------------------------------------------------------
 Margins
 --------------------------------------------------------------------------------
 */
-.mt-0   { margin-top:    0; }
 .mt-5   { margin-top:    5px; }
 .mt-10  { margin-top:    10px; }
 .mt-15  { margin-top:    15px; }
 .mt-20  { margin-top:    20px; }
 .mt-30  { margin-top:    30px; }
-.mt-35  { margin-top:    35px; }
 .mt-40  { margin-top:    40px; }
 .mt-50  { margin-top:    50px; }
 .mt-75  { margin-top:    75px; }
@@ -108,7 +118,6 @@ Margins
 .mb-150 { margin-bottom: 150px; }
 .mb-200 { margin-bottom: 200px; }
 .mb-250 { margin-bottom: 250px; }
-.ml-0   { margin-left:   0px; }
 .ml-5   { margin-left:   5px; }
 .ml-10  { margin-left:   10px; }
 .ml-15  { margin-left:   15px; }
@@ -123,6 +132,14 @@ Margins
 .ml-200 { margin-left:   200px; }
 .ml-250 { margin-left:   250px; }
 
+
+/*
+--------------------------------------------------------------------------------
+Paddings
+--------------------------------------------------------------------------------
+*/
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
 
 
 /*

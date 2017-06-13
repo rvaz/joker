@@ -9,6 +9,11 @@ Sans serif auxiliar mixin
   line-height: 120%;
 }
 
+@mixin serif($w:400) {
+  font-family: 'Playfair Display', serif;
+  font-weight: $w;
+  line-height: 120%;
+}
 
 
 /*
@@ -23,14 +28,12 @@ Mobile first queries
 @mixin resolution($r) { @media (min-width: #{$r})  { @content; } }
 
 
-
 /*
 --------------------------------------------------------------------------------
 Retina queries
 --------------------------------------------------------------------------------
 */
 @mixin retina($dp) { @media (-webkit-min-device-pixel-ratio: #{$dp}) { @content; } }
-
 
 
 /*
@@ -42,6 +45,9 @@ Fix for mobile devices
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+@mixin smooth_scroll() {
+  -webkit-overflow-scrolling: touch;
+}
 
 
 /*

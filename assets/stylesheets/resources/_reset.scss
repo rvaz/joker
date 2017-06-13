@@ -1,3 +1,51 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+img, input, button, textarea,
+small, strong, sub, sup, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption,
+table, thead, tbody, tfoot, th, tr, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary,
+time, mark, audio, video {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-collapse: collapse;
+  border-radius: 0;
+  border-spacing: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 120%;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  resize: none;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input[type=search]::-ms-clear { display: none; height: 0; width: 0; }
+input[type=search]::-ms-reveal { display: none; height: 0; width: 0; }
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration { display: none; }
+
+
 /*
 --------------------------------------------------
 html is set to 62.5% so that all REM measurements are 10px based
@@ -15,51 +63,6 @@ html {
 }
 
 body {
-  line-height: 1;
   letter-spacing: .01em;
+  line-height: 1;
 }
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-img, input, button, textarea,
-small, strong, sub, sup, var,
-b, u, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, caption,
-table, thead, tbody, tfoot, th, tr, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font: 100%/120% inherit;
-  vertical-align: baseline;
-  background: transparent;
-  list-style: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  resize: none;
-  box-sizing: border-box;
-  appearance: none;
-  border-radius: 0;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-  display: block;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-input[type=search]::-ms-clear { display: none; width: 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width: 0; height: 0; }
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration { display: none; }

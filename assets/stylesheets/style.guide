@@ -40,17 +40,18 @@ FOLDERS STRUCTURE
 - pages
   - _auth.scss          # Authentication screens specific styles
   - _home.scss          # Home specific styles
-  - _contact.scss       # Contact specific styles
+  - _contacts.scss      # Contact specific styles
   - _settings.scss      # Settings specific styles
   - ...
 
 - resources
-  - _joker.scss         # Grid system
+  - _grid.scss          # Grid system
   - _mixins.scss        # Helper functions such as text-shadow, box-shadow or responsive break points
   - _reset.scss         # Reset/normalize elements cross browser
   - _fonts.scss         # Font family to be used
   - _helpers.scss       # Atomic helpers
   - _palette.scss       # Colors palette
+  - _variables.scss     # Images/resources and helper variables, e.g. $radius
 
 (- components)          # Folder for reactjs specific components (create only if needed)
 
@@ -63,10 +64,11 @@ IMPORTS ORDER @application.scss
 --------------------------------------------------------------------------------
 'resources/reset',
 'resources/mixins',
-'resources/joker',
+'resources/grid',
 
 'resources/fonts',
 'resources/palette',
+'resources/variables',
 
 'atoms/base',
 'atoms/progressbar',
