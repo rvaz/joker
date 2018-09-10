@@ -1,18 +1,20 @@
 /*
 --------------------------------------------------------------------------------
-Sans serif auxiliar mixin
+Fonts auxiliar mixins
 --------------------------------------------------------------------------------
 */
-@mixin sans_serif($w:300) {
+@mixin base_font($w:300, $s:1.6) {
   font-family: 'Open Sans', sans-serif;
+  font-size:   #{$s}rem;
   font-weight: $w;
-  line-height: 120%;
+  line-height: #{$s * 1.3}rem;
 }
 
-@mixin serif($w:400) {
+@mixin serif_font($w:400, $s:2) {
   font-family: 'Playfair Display', serif;
+  font-size:   #{$s}rem;
   font-weight: $w;
-  line-height: 120%;
+  line-height: #{$s * 1.4}rem;
 }
 
 
@@ -34,6 +36,20 @@ Retina queries
 --------------------------------------------------------------------------------
 */
 @mixin retina($dp) { @media (-webkit-min-device-pixel-ratio: #{$dp}) { @content; } }
+
+
+/*
+--------------------------------------------------------------------------------
+GRID CONTAINER
+--------------------------------------------------------------------------------
+*/
+@mixin grid($columns, $rows, $column_gap:0, $row_gap:0) {
+  display: grid;
+  grid-column-gap: $column_gap;
+  grid-row-gap: $row_gap;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
 
 
 /*

@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 NAMING CONVENTION
 --------------------------------------------------------------------------------
-Everything must be as verbose as possible.
+Everything must be as verbose as possible, so its purpose is clear to everyone.
 Use hyphens when naming mixins, extends and classes.
-User underscore for variables.
+Use underscore for variables.
 Favour nesting instead of BEM naming conventions.
 Do not use camelCase.
 
@@ -17,41 +17,55 @@ Minimize specificity, i.e., favour generic classes/single elements (atoms) over 
 
 
 --------------------------------------------------------------------------------
+CODING CONVENTION
+--------------------------------------------------------------------------------
+Use proper indentation (recommended two spaces).
+Use at least a space between properties and values, e.g. width: 2rem not width:2rem.
+Add a blank line above selectors that have styles.
+Don't add units after 0 values, unless it is required by a mixin.
+When setting rules, follow this order: @extends, @includes, styling rules, pseudo states, concatenated selectors, nested selectors, media queries.
+
+
+--------------------------------------------------------------------------------
 FOLDERS STRUCTURE
 --------------------------------------------------------------------------------
 - atoms
-  - _base.scss          # Common base styles, e.g. h1, h2, p, b
-  - _progressbar.scss   # Progress bar style
+  - _base.scss          # Common base styles, e.g. body, a, p, b
   - _buttons.scss       # Buttons styles
-  - _textfields.scss    # Input and textarea styles
-  - _checkbox.scss      # Checkboxes and toggles styles
+  - _checkbox.scss      # Checkboxes, radios and toggles styles
   - _dropdown.scss      # Dropdown style
+  - _headings.scss      # Title and subtitle styles
+  - _progressbar.scss   # Progress bar style
+  - _textfields.scss    # Input and textarea styles
   - ...
 
 - blocs
-  - _widget.scss        # Blocs of content/items, e.g. widgets
-  - _chat.scss          # Messages styles
   - _chart.scss         # Chart styles
-  - _header.scss        # Header
+  - _chat.scss          # Messages styles
   - _footer.scss        # Footer
+  - _header.scss        # Header
   - _pagination.scss    # Pagination
+  - _widget.scss        # Blocs of content/items, e.g. widgets
   - ...
 
 - pages
   - _auth.scss          # Authentication screens specific styles
-  - _home.scss          # Home specific styles
   - _contacts.scss      # Contact specific styles
+  - _home.scss          # Home specific styles
   - _settings.scss      # Settings specific styles
   - ...
 
 - resources
-  - _grid.scss          # Grid system
-  - _mixins.scss        # Helper functions such as text-shadow, box-shadow or responsive break points
-  - _reset.scss         # Reset/normalize elements cross browser
   - _fonts.scss         # Font family to be used
+  - _grid.scss          # Grid system
   - _helpers.scss       # Atomic helpers
+  - _mixins.scss        # Helper functions such as text-shadow, box-shadow or responsive break points
   - _palette.scss       # Colors palette
+  - _reset.scss         # Reset/normalize elements cross browser
   - _variables.scss     # Images/resources and helper variables, e.g. $radius
+  - _wrappers.scss      # Generic elements that help organize content, e.g. .flex-sb
+
+(- vendor)              # Folder for external libs, e.g. animate.css (create only if needed)
 
 (- components)          # Folder for reactjs specific components (create only if needed)
 
@@ -69,24 +83,28 @@ IMPORTS ORDER @application.scss
 'resources/fonts',
 'resources/palette',
 'resources/variables',
+'resources/wrappers',
+
+('vendor/*',)
 
 'atoms/base',
-'atoms/progressbar',
 'atoms/buttons',
-'atoms/textfields',
 'atoms/checkbox',
 'atoms/dropdown',
+'atoms/headings',
+'atoms/progressbar',
+'atoms/textfields',
 
-'blocs/widget',
-'blocs/chat',
 'blocs/chart',
-'blocs/header',
+'blocs/chat',
 'blocs/footer',
+'blocs/header',
 'blocs/pagination',
+'blocs/widget',
 
 'pages/auth',
-'pages/home',
 'pages/contact',
+'pages/home',
 'pages/settings',
 
 ('components/*',)
@@ -106,4 +124,11 @@ e.g. fixing buttons and checkboxes on IE9
 Then import all these fixes in main file ie.scss and link this file in html header tag [if lt IE 9] to target only IE.
 
 For IE10 and above wrap the necessary css code with the following @media screen and (min-width:0\0) { /* css here */ }
+
+
+--------------------------------------------------------------------------------
+RESPONSIVENESS
+--------------------------------------------------------------------------------
+When a file starts to have too much complexity due to several break points or too many rules, it may be a good case to address responsiveness on a separate file. When that is the case use the same file name with a suffix to identify its purpose.
+e.g. _form_responsiveness.scss
 

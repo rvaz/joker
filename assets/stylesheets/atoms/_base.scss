@@ -11,14 +11,11 @@ html {
 }
 
 body {
+  @include serif_font(400, 2);
   background-color: $white;
   color: $dark;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
   font-style: normal;
-  font-weight: 400;
   letter-spacing: -.001em;
-  line-height: 2.8rem;
 }
 
 h1 {
