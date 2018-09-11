@@ -2,8 +2,8 @@
 NAMING CONVENTION
 --------------------------------------------------------------------------------
 Everything must be as verbose as possible, so its purpose is clear to everyone.
-Use hyphens when naming mixins, extends and classes.
-Use underscore for variables.
+Use underscore when naming mixins and variables.
+Use hyphens for extends, placeholder selectors and classes.
 Favour nesting instead of BEM naming conventions.
 Do not use camelCase.
 
